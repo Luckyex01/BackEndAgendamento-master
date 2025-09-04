@@ -1,0 +1,235 @@
+/* ===== Configurações gerais ===== */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  line-height: 1.5;
+}
+
+.light-mode {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.dark-mode {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* ===== Cabeçalho ===== */
+.swagger-ui .topbar {
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swagger-ui .topbar a {
+  font-weight: bold;
+  font-size: 20px;
+  color: inherit;
+}
+
+/* ===== Botão de alternância de tema ===== */
+.theme-toggle button {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  transform: translateY(-1px);
+}
+
+/* ===== Containers principais ===== */
+.swagger-ui .wrapper {
+  padding: 20px;
+}
+
+.swagger-ui .opblock {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.swagger-ui .opblock:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* ===== Títulos de tags ===== */
+.swagger-ui .opblock-tag {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background-color: var(--tag-bg);
+  color: var(--tag-color);
+}
+
+/* ===== Cores do modo claro ===== */
+.light-mode .swagger-ui .opblock-tag {
+  --tag-bg: #e2e8f0;
+  --tag-color: #1e293b;
+}
+
+.light-mode .swagger-ui .btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* ===== Cores do modo escuro ===== */
+.dark-mode .swagger-ui .opblock-tag {
+  --tag-bg: #1e293b;
+  --tag-color: #f1f5f9;
+}
+
+.dark-mode .swagger-ui .btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* ===== Campo de filtro por Tag ===== */
+.light-mode .swagger-ui .filter input {
+  background-color: #e2e8f0 !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.dark-mode .swagger-ui .filter input {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #475569 !important;
+}
+
+/* ===== Select de servidores ===== */
+.light-mode .swagger-ui .servers select {
+  background-color: #e2e8f0 !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.dark-mode .swagger-ui .servers select {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #475569 !important;
+}
+
+/* ===== Container externo de servidores ===== */
+.light-mode .swagger-ui .servers {
+  background-color: #ffffff !important;
+}
+
+.dark-mode .swagger-ui .servers {
+  background-color: #0f172a !important;
+}
+
+/* ===== Botão Authorize ===== */
+.light-mode .swagger-ui .authorize {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+.dark-mode .swagger-ui .authorize {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+/* ===== Animação de abertura de detalhes ===== */
+.swagger-ui .opblock-summary-control {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swagger-ui .opblock-summary-control:hover {
+  background-color: rgba(59,130,246,0.1);
+}
+
+/* ===== Campos de entrada ===== */
+.swagger-ui input,
+.swagger-ui textarea,
+.swagger-ui select {
+  border-radius: 6px !important;
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swagger-ui input:focus,
+.swagger-ui textarea:focus,
+.swagger-ui select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.3);
+  outline: none;
+}
+
+/* ===== Scrollbar custom ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 5px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* ===== Botões de requisição ===== */
+.swagger-ui .opblock .opblock-summary-method {
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.swagger-ui .opblock-get .opblock-summary-method {
+  background-color: #22c55e;
+}
+
+.swagger-ui .opblock-post .opblock-summary-method {
+  background-color: #3b82f6;
+}
+
+.swagger-ui .opblock-put .opblock-summary-method {
+  background-color: #f59e0b;
+}
+
+.swagger-ui .opblock-delete .opblock-summary-method {
+  background-color: #ef4444;
+}
+
+/* ===== Melhorias nas respostas ===== */
+.swagger-ui .response-col_description {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.swagger-ui .response-col_status {
+  font-weight: bold;
+}
+
+/* ===== Links ===== */
+a {
+  color: #2563eb;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== Animação de fade-in ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
