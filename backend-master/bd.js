@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
 // Conexão com PostgreSQL
-const sequelize = new Sequelize("LuckyappsBD", "postgres", "admin", {
+const sequelize = new Sequelize("LuckyappsBD", "postgres", "Fac@2025401!!", {
   host: "localhost",
   dialect: "postgres",
 });
@@ -28,10 +28,11 @@ const Usuario = sequelize.define('Usuario', {
   tipoUsuario: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    defaultValue: 1,
   },
   foto: {
     type: DataTypes.STRING(100),
-    allowNull: false,
+    allowNull: true,
   },
 }, {
   tableName: 'Tb_Usuario',

@@ -52,8 +52,8 @@ app.post('/usuarios/login', async (req, res) => {
 
     if (usuario.foto) {
       const nomeArquivo = path.basename(usuario.foto);
-      const urlBase = 'http://172.16.3.165:3000'; // ou IP da máquina, tipo 'http://192.168.0.100:3000'
-      fotoUrl = `http://172.16.3.165:3000/uploads/${nomeArquivo}`;
+      const urlBase = 'http://192.168.30.198:3000'; // ou IP da máquina, tipo 'http://192.168.0.100:3000'
+      fotoUrl = `http://192.168.30.198:3000/uploads/${nomeArquivo}`;
     }
 
     res.json({
